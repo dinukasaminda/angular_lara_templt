@@ -1,0 +1,56 @@
+/* YOUR CUSTOM STYLES */  
+            html,
+            body,
+            .view {
+                height: 100%;
+            }
+            /* Navigation*/
+
+
+
+
+
+
+            /* Carousel*/
+
+            .carousel,
+            .carousel-item,
+            .active {
+                height: 100%;
+            }
+
+            .carousel-inner {
+                height: 100%;
+            }
+
+            .carousel-item:nth-child(1) {
+                background-image: url("c_img/1.jpg");
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+
+            .carousel-item:nth-child(2) {
+                background-image: url("c_img/2.jpg");
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+
+            .carousel-item:nth-child(3) {
+                background-image: url("c_img/3.jpg");
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+            /*Caption*/
+
+            .flex-center {
+                color: #fff;
+            }
+
+            @media (min-width: 776px) {
+                .carousel .view ul li {
+                    display: inline;
+                }
+                .carousel .view .full-bg-img ul li .flex-item {
+                    margin-bottom: 1.5rem;
+                }
+            }

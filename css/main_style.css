@@ -1,0 +1,5 @@
+input.ng-invalid.ng-dirty{bodred:1px solid red;}
+#error_token{
+	color: red ;
+	border-bottom: 1px solid red;
+}

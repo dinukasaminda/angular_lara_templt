@@ -1,0 +1,97 @@
+ <h2>Sign Up</h2>
+
+
+<form name="signup_frm" >
+<div class="form-group row" >
+  <label for="example-text-input"  class="col-xs-2 col-form-label">Email</label>
+  <div class="col-xs-10">
+    <input type="email"  name="username" required class="form-control"   ng-model="signUpInfo.username" placeholder="email">
+   
+  </div>
+</div>
+<div class="form-group row">
+  <label for="example-text-input" class="col-xs-2 col-form-label">Password</label>
+  <div class="col-xs-10">
+    <input type="password" class="form-control" required ng-model="signUpInfo.password" placeholder="Choose Password">
+  </div>
+</div>
+<div class="form-group row">
+  <label for="example-text-input" class="col-xs-2 col-form-label">Re Enter Password</label>
+  <div class="col-xs-10">
+    <input type="password" class="form-control" required ng-model="signUpInfo.password2" placeholder="re Enter Password">
+  </div>
+</div>
+<div class="form-group row">
+  <label for="example-text-input" class="col-xs-2 col-form-label">First Name</label>
+  <div class="col-xs-10">
+    <input type="text" class="form-control" required ng-model="signUpInfo.fname" placeholder="First Name">
+  </div>
+</div>
+<div class="form-group row">
+  <label for="example-text-input" class="col-xs-2 col-form-label">Last Name</label>
+  <div class="col-xs-10">
+    <input type="text" class="form-control" required ng-model="signUpInfo.lname" placeholder="Last Name">
+  </div>
+</div>
+<div class="form-group row">
+  <label for="example-text-input" class="col-xs-2 col-form-label">B'day</label>
+  <div class="col-xs-10">
+    <input type="text" name="b_day" class="form-control" required ng-model="signUpInfo.b_day " placeholder="B'day">
+  </div>
+</div>
+<div class="form-group row">
+  <label for="example-text-input" required class="col-xs-2 col-form-label">Age</label>
+  <div class="col-xs-10">
+    <input type="number" class="form-control" ng-model="signUpInfo.age" placeholder="Age">
+  </div>
+</div>
+<div class="form-group row">
+  <label for="example-text-input" class="col-xs-2 col-form-label">Google Location<br>(Optional)</label>
+  <div class="col-xs-10">
+    <input type="text" class="form-control" ng-model="signUpInfo.geolocation" placeholder="Google location (Optional)">
+  </div>
+</div>
+<div class="form-group row">
+  <label for="example-text-input" class="col-xs-2 col-form-label">Phone</label>
+  <div class="col-xs-10">
+     <input type="phone" class="form-control" required ng-model="signUpInfo.phone_number" placeholder="Phone Number">
+  </div>
+</div>
+        
+        
+         
+        
+        
+       
+        
+         
+         
+
+         <div class="form-group">
+                    <label class="col-xs-3 control-label">Gender</label>
+                    <div class="col-xs-6">
+                        <div class="radio">
+                            <label>
+                                <input type="radio" class="form-control" ng-model="signUpInfo.gender" ng-value="1" /> Male
+                            </label>
+                        </div>
+                        <div class="radio">
+                            <label>
+                                <input type="radio" class="form-control" ng-model="signUpInfo.gender" ng-value="0"/> Female
+                            </label>
+                        </div>                                                
+                    </div>
+        </div>
+       <div class="form-group">
+        <label class="sr-only" for="exampleInputAmount">Facebook id:</label>
+        <div class="input-group">
+          <div class="input-group-addon">https://www.facebook.com/</div>
+          <input type="text" class="form-control" required ng-model="signUpInfo.fb_url"  id="exampleInputAmount" placeholder="facebook user id">
+         
+        </div>
+      </div>
+
+         <label class="col-xs-3 control-label" id="error_token">{{error_Message}}</label>
+        <button ng-disabled="frm.$invalid" ng-click="signUserUp()">Sign Up</button>| <a ui-sref='login'>Login</a>
+    </div>
+    </form>

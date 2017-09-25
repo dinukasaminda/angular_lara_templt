@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<script src="js/angular.min.js"></script>
+<script src="js/angular-ui-router.js"></script>
+    <!--<link rel="stylesheet" href="css/bootstrap.min.css">-->
+    <script src="app.js"></script>
+
+
+<body ng-controller="myController" >
+    <textarea rows="10" ng-model="jsonData" class="col-md-5">{{data|json}}</textarea>
+    <input type="text"  ng-model="data.modelName" placeholder="model name"  />
+
+    <a ng-click="addnew()" href="">add new </a>
+<div >
+    <div class="row" ng-repeat="item in data.items">
+         <input type="text" ng-model="item.name" /><a ng-click="deleteThis(item)" href="">delete</a>
+    </div>
+    
+    </div>
+<hr>
+<div>
+<br>{{abcMydata}}<br>
+{{abcMydata2}}
+    <p>front end ui</p>
+<pre>
+    <div>
+        {{data1}}
+    
+    
+    </div>
+</pre>
+</div>
+
+
+<hr>
+<div>
+<br>
+    <p>front end table view</p>
+<pre>
+    <div>{{data2}}</div>
+<pre>
+</div>
+
+
+<hr>
+<div>
+<br>
+    <p>front end angular Controller crud</p>
+<pre>
+
+    <div>{{data3}}</div>
+<pre>
+</div>
+
+ 
+ <hr>
+<div>
+<br>
+    <p>front end angular Service crud</p>
+<pre>
+
+    <div>{{data4}}</div>
+<pre>
+</div>
+
+
+ 
+ <hr>
+<div>
+<br>
+    <p>reg routes</p>
+<pre>
+
+<div>{{data5RegRoutes}}</div>
+<pre>
+</div>
+
+
+ <hr>
+<div>
+<br>
+    <p>php Controller </p>
+<pre>
+
+<div>{{data6phpControllerFunctions}}</div>
+<pre>
+</div>
+
+
+ <hr>
+<div>
+<br>
+    <p>php DB Shema</p>
+<pre>
+
+    <div>{{data7Shema}}</div>
+<pre>
+</div>
+    
+</body>
+</html>

@@ -1,0 +1,71 @@
+This is the application you are trying to gain access to.... super cool. 
+<a ng-click="showProfile()">{{username}}</a>|<a ng-click="logout()">logout</a>
+
+
+
+<h1 >{{Profilename}}</h1>
+<div id="posts" >
+	
+
+
+
+
+<div class="container">
+  <h2 style="height: 300px; background: #33ffee;">Find Partner</h2>
+
+
+
+  <div ng-controller="DemoController">
+    
+  <p  ng-click="showFindNew()">find new</p><p ng-click="showFriends()">find in my friends</p><p ng-click="showFriendsRequests()">friends reqests</p><p ng-click="showSentRequests()">sent reqests</p>
+    <div tagged-infinite-scroll="getMore()" tagged-infinite-scroll-distance="2">
+      <div class="items" ng-class="{ paginating: paginating }">
+        <div ng-repeat="item in items" ng-style="item.styles">
+          <h3  class="ng-hide">{{ item.hashID }}</h3>
+          
+        
+          <!--<img src="./img/profile_pics/{{item.photo_id}}"/>-->
+        
+
+
+          <div class="row">
+                <!--First column-->
+                <div class="col-md-5 col-md-offset-3">
+    	<div class="card">
+
+                        <!--Card image-->
+                        <div class="view overlay hm-white-slight">
+                            <img src="./img/uploads/profilep/{{item.photo_id}}" class="img-fluid" alt="">
+                            <a href="#!">
+                                <div class="mask"></div>
+                            </a>
+                        </div>
+                        <!--/.Card image-->
+
+                        <!--Card content-->
+                        <div class="card-block">
+                            <!--Title-->
+                            <h4 class="card-title">{{ item.fname }}  {{ item.lname }}</h4>
+                            <!--Text-->
+                            <p class="card-text"> age : {{ item.age }} Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <div class="read-more">
+                                <a class="{{item.styleButton}}" ng-click="SendRequest(item.id)"> {{item.reqSended}}</a>
+                            </div>
+                            <div class="read-more">
+                                <a class="btn btn-default" ui-sref="friend_profile({ frdhash: item.hashID })"  ng-hide= "{{item.NotFriend}}">Profile</a>
+                            </div>
+                        </div>
+                        <!--/.Card content-->
+
+                    </div>
+                    </div></div>
+
+                    </div>
+        </li>
+      </ul>
+    </div>
+
+  </div>
+</div>
+	
+</div>

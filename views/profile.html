@@ -1,0 +1,27 @@
+<div ng-controller="ProfileController">
+<p>Email:	{{profile.username}}</p>
+<p>First Name:	{{profile.fname}}</p>
+<p>Last Name:	{{profile.lname}}</p>
+<p>B'day:	{{profile.b_day}}</p>
+<p>Age:	{{profile.age}}</p>
+<p>Google Location:	{{profile.geo_location}}</p>
+<p>Phone Number:	{{profile.phone_number}}</p>
+<p>FaceBook url:	{{profile.fb_url}}</p>
+<p>Gender:	{{profile.gender_str}}</p>
+<img src="./img/uploads/profilep/{{profile.photo_id}}"/>
+<p>change profile photo:</p>
+upload File : 
+
+ 
+        <div class="col-md-4">  
+             <input type="file" file-input="files" />  
+        </div>  
+        <div class="col-md-6">  
+             <button class="btn btn-info" ng-click="uploadFile()">Upload Image</button>  
+        </div>  
+        <div style="clear:both"></div>  
+        <br /><br />  
+        <!--<div class="col-md-3" ng-repeat="image in images">  
+             <img ng-src="upload/{{image.name}}" width="200" height="200" style="padding:16px; border:1px solid #f1f1f1; margin:16px;" />  
+        </div>  -->
+</div>
